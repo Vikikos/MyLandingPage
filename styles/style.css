@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Limelight&display=swap');
 :root{
     --verde: #70751C;
-    --beige:#fcf1eb;
+    /*--beige:#fcf1eb;*/
+    --beige: #FCF3EB;
+    --marron: #2e1a0d;
 }
 *{
     margin: 0;
@@ -61,7 +63,9 @@ h1{
 
 #sliderImagenes img{
     width: 100%;
-    clip-path: circle(40%);
+    /*clip-path: circle(40%);*/
+    object-fit: cover;
+    aspect-ratio: 1/1;
 }
 
 #sliderImagenes div:nth-child(1) > img{
@@ -102,4 +106,17 @@ h1{
     100%{
         opacity: 1;
     }
+}
+button{
+    background-color: var(--verde);
+    border: none;
+    font-size: 2em;
+    padding: 0.5em;
+    margin: 0 auto;
+}
+footer{
+    background-color: var(--marron);
+    color: var(--beige);
+    padding: 2em;
+    text-align: center;
 }
