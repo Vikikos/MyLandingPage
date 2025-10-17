@@ -62,34 +62,38 @@ main{
 h1{
     text-align: center;
     color: var(--marron);
+    text-transform: uppercase;
 }
 #sliderImagenes{
-    margin: 0 auto;
-    margin-top: 2em;
-    display: grid;
+    margin: 2em auto;
+    margin-bottom: 9em;
+    /*display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 1em;
-    max-width: 850px;
+    gap: 1em;*/
+    max-width: 1100px;
+
+    display: flex;
+    flex-direction: row;
 }
 #sliderImagenes div{
     padding: .3em;
     border: 1px solid var(--marron);
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 350px;
+    margin: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #sliderImagenes div:nth-child(1){
-    grid-area: 1 / 1 / 2 / 2;
+   /* grid-area: 1 / 1 / 2 / 2;*/
 }
 #sliderImagenes div:nth-child(2){
-    grid-area: 2 / 2 / 3 / 3;
-    transform: translateY(-7em);
+    /*grid-area: 2 / 2 / 3 / 3;*/
+    transform: translateY(7em);
 }
 #sliderImagenes div:nth-child(3){
-    grid-area: 1 / 3 / 2 / 4;
+    /*grid-area: 1 / 3 / 2 / 4;*/
 }
 
 #sliderImagenes img{
@@ -140,9 +144,28 @@ h1{
         opacity: 1;
     }
 }
-p span:first-child{
+.textoVideo{
+    margin: 0 auto;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.textoVideo span{
     color: var(--verde);
     font-size: 2em;
+}
+#formSuscription{
+    
+}
+.videoAmplio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em auto;
+}
+.videoAmplio > video{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .textoFondo{
     text-indent: 50px;
