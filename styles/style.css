@@ -25,6 +25,9 @@ body{
     grid-template-rows: auto 1fr auto;
     color: var(--marron);
     font-size: 20px;
+
+    /* background: rgba(43, 23, 4, 1); */
+/* background: linear-gradient(90deg,rgba(46, 28, 3, 1) 5%, rgba(255, 245, 242, 1) 50%, rgba(43, 23, 4, 1) 95%); */
 }
 header{
     background-color: var(--verde);
@@ -63,6 +66,7 @@ h1{
     text-align: center;
     color: var(--marron);
     text-transform: uppercase;
+    font-size: 1.5em;
 }
 #sliderImagenes{
     margin: 2em auto;
@@ -154,7 +158,30 @@ h1{
     font-size: 2em;
 }
 #formSuscription{
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+#formSuscription input{
+    padding: .5em;
+    border-radius: 3px;
+    font-size: 20px;
+    border: 1px solid var(--marron);
+}
+#formSuscription input:first-child{
+    padding: .5em;
+    margin-right: 0.5em;
+    width: 25vw;
+    color: #797979;
+    text-transform: uppercase;
+}
+#formSuscription input:last-child{
+    background-color: var(--verde);
+    color: var(--beige);
+    padding: .5em 1em;
+    border-color: var(--verde);
 }
 .videoAmplio{
     width: 100%;
@@ -174,13 +201,13 @@ h1{
     color: var(--beige);
     text-align: justify;
 }
-.textoFondo span:last-child{
+/* .textoFondo span:last-child{
     display: block;
     width: 100%;
     text-align: center;
     text-indent: 0;
     font-size: 25px;
-}
+} */
 .logoTexto{
     display: inline;
     width: auto;
@@ -201,7 +228,7 @@ button{
     /* background-color: var(--verde); */
     background-color: transparent;
     border: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 0.5em;
     margin: 0 auto;
     cursor: pointer;
