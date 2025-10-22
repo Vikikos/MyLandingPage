@@ -5,6 +5,7 @@
     /*--beige:#fcf1eb;*/
     --beige: #FCF3EB;
     --marron: #492913;
+    --sombra: #4929133b;
 }
 *{
     margin: 0;
@@ -38,6 +39,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 5px 10px var(--sombra);
 }
 @keyframes animacionInicio {
     0%{
@@ -103,9 +105,11 @@ h1{
 #sliderImagenes img{
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1; 
 }
-
+#sliderImagenes img:hover{
+    transform: scale(1.05);
+}
 #sliderImagenes div:nth-child(1) > img{
     animation: aparecerImagen1 6s ease;
 }
@@ -149,8 +153,7 @@ h1{
     }
 }
 .textoVideo{
-    margin: 0 auto;
-    margin-bottom: 2em;
+    margin: 1em auto;
     text-align: center;
 }
 .textoVideo span{
@@ -170,14 +173,14 @@ h1{
     font-size: 20px;
     border: 1px solid var(--marron);
 }
-#formSuscription input:first-child{
+#formSuscription input[type='email']{
     padding: .5em;
     margin-right: 0.5em;
     width: 25vw;
     color: #797979;
     text-transform: uppercase;
 }
-#formSuscription input:last-child{
+#formSuscription input[type='submit']{
     background-color: var(--verde);
     color: var(--beige);
     padding: .5em 1em;
@@ -193,6 +196,7 @@ h1{
 .videoAmplio > video{
     max-width: 1200px;
     margin: 0 auto;
+    box-shadow: 0 5px 10px var(--sombra);
 }
 .textoFondo{
     text-indent: 50px;
@@ -222,7 +226,7 @@ h1{
 .textFinal > div{
     font-size: 24px;
     padding: 1em;
-    color: var(--verde);
+    color: var(--marron);
 }
 button{
     /* background-color: var(--verde); */
@@ -240,6 +244,10 @@ button{
     background-size: 0 1px, 100% 1px;
     transition: all .5s cubic-bezier(0.31, 0, 0.13, 1);;
 }
+button a{
+    text-decoration: none;
+    color: var(--verde);
+}
 button:hover{
     background-position: 0 100%, calc(100%+10px) 100%;
     background-size: 100% 1px, 0 1px;
@@ -250,4 +258,66 @@ footer{
     color: var(--beige);
     padding: 2em;
     text-align: center;
+}
+
+@media (width<=1250px){
+    h1{
+        font-size: 1.2em;
+    }
+    #sliderImagenes{
+        width: 100%;
+    }
+    #sliderImagenes div{
+        margin: 0.5em;
+    }
+    .textFinal > div{
+        font-size: 18px;
+    }
+    button{
+        font-size: 1em;
+    }
+    .videoAmplio video{
+        max-width: 90vw;
+    }
+    .textoFondo{
+        text-indent: 30px;
+        padding: 1em;
+    }
+    .textoVideo{
+        padding: 0.5em;
+    }
+    .textoVideo span{
+        font-size: 1.5em;
+    }
+    #formSuscription{
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+    #formSuscription input{
+        margin: 0.5em 0;
+    }
+    #formSuscription input[type='email']{
+        width: 80vw;
+        margin: 0;
+    }
+}
+
+@media (width<=1250px){
+    #sliderImagenes{
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        margin: 1em auto;
+    }
+    #sliderImagenes{
+        width: 100%;
+    }
+    #sliderImagenes div{
+        max-width: 250px;
+        margin: 0.5em;
+    }
+    #sliderImagenes div:nth-child(2){
+        transform: translateY(0);
+    }
 }
