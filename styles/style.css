@@ -228,8 +228,9 @@ h1{
     padding: 1em;
     color: var(--marron);
 }
-button{
-    /* background-color: var(--verde); */
+.boton{
+    text-decoration: none;
+    color: var(--verde);
     background-color: transparent;
     border: none;
     font-size: 1.5em;
@@ -244,11 +245,7 @@ button{
     background-size: 0 1px, 100% 1px;
     transition: all .5s cubic-bezier(0.31, 0, 0.13, 1);;
 }
-button a{
-    text-decoration: none;
-    color: var(--verde);
-}
-button:hover{
+.boton:hover{
     /*background-position: 0 100%, calc(100%+10px) 100%;*/
     background-position: 0 100%, 110% 100%;
     background-size: 100% 1px, 0 1px;
