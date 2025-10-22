@@ -191,7 +191,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em auto;
+    padding: 1em 0;
 }
 .videoAmplio > video{
     max-width: 1200px;
@@ -249,7 +249,8 @@ button a{
     color: var(--verde);
 }
 button:hover{
-    background-position: 0 100%, calc(100%+10px) 100%;
+    /*background-position: 0 100%, calc(100%+10px) 100%;*/
+    background-position: 0 100%, 110% 100%;
     background-size: 100% 1px, 0 1px;
     color: var(--marron);
 }
@@ -303,7 +304,7 @@ footer{
     }
 }
 
-@media (width<=1250px){
+@media (width<=650px){
     #sliderImagenes{
         flex-direction: column;
         align-items: center;
